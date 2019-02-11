@@ -1,9 +1,5 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using System;
-using System.Collections.Generic;
-using System.Drawing.Imaging;
-using OpenQA.Selenium.Support.UI;
 
 namespace UserTest
 {
@@ -17,8 +13,7 @@ namespace UserTest
 
             ITakesScreenshot ssdriver = driver as ITakesScreenshot;
             Screenshot screenshot = ssdriver.GetScreenshot();
-            string saveLocation = @"C:\test\SearchInput.png"; 
-            screenshot.SaveAsFile(saveLocation);
+            screenshot.SaveAsFile("SearchInput.png");     // Default path is C:\SW\UserTest\UserTest\bin\Debug\
 
             driver.Quit();
 
